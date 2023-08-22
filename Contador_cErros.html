@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contador de numeros</title>
+	<style type="text/css">
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			color: #333;
+			font-size: 24px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		button {
+			background-color: #4CAF50; /* Green */
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<h1>Contador de numeros</h1>
+	
+	<p>Clique no botao abaixo para incrementar o contador:</p>
+	
+	<p id="contador">0</p>
+	
+	<button onclick="incrementar()">Incrementar</button>
+	
+	<button onclick="gerarErro()">Gerar erro</button>
+
+	<script type="text/javascript">
+		
+		var contador = document.getElementById("contador");
+		
+		function incrementar() {
+			
+			var numeroAtual = parseInt(contador.innerHTML);
+			
+			numeroAtual++;
+			
+			contador.innerHTML = numeroAtual.toString();
+			
+		}
+		
+		function gerarErro() {
+			
+			throw new Error("Ocorreu um erro!");
+			
+		}
+		
+	</script>
+	
+</body>
+</html>
